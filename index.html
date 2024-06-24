@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Modal</title>
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="grid place-content-center h-dvh">
+      <div class="relative">
+        <button
+          id="openModal"
+          class="bg-indigo-600 px-3 py-2.5 rounded-md text-neutral-50 text-base sm:text-sm font-medium shadow-md hover:bg-indigo-700 hover:scale-105 hover:break-words transition duration-500 ease-in-out break-normal"
+        >
+          Click Me!
+        </button>
+      </div>
+      <div
+        id="card"
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-screen bg-black/20 hidden opacity-0"
+      >
+        <div class="absolute top-52 left-1/2 -translate-x-1/2">
+          <div
+            class="bg-white mx-auto w-[350px] sm:w-[530px] rounded-xl shadow-lg p-6 flex flex-col items-center justify-center space-y-6"
+          >
+            <header>
+              <div
+                class="size-14 rounded-full bg-emerald-100 flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-7 text-emerald-700"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+            </header>
+            <div class="space-y-1 text-center">
+              <h1 class="text-lg text-neutral-900 font-bold">
+                Payment Successful
+              </h1>
+              <p
+                class="text-sm text-neutral-500 font-normal leading-relaxed break-normal"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur, eligendi!
+              </p>
+            </div>
+            <div class="w-full">
+              <button
+                id="closeModal"
+                class="w-full px-3 py-2.5 text-sm bg-indigo-700 text-white rounded-md shadow-md font-bold hover:bg-indigo-400 transition duration-200 ease-in-out"
+              >
+                Go back to dashboard
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="public/js/script.js"></script>
+  </body>
+</html>
